@@ -368,7 +368,8 @@ async def start_command(
         "Cara penggunaan:\n\n"
         "/val_sifa insert\n"
         "/val_sifa delete\n\n"
-        "Upload CSV dengan caption command."
+        "Upload CSV dengan caption command.\n\n"
+        "file CSV harus berisi column polygon,polygon_type,label"
     )
 
 
@@ -517,7 +518,7 @@ async def handle_document(
                 await update.message.reply_document(
                     document=file,
                     filename=os.path.basename(output),
-                    caption="✅ File hasil validasi"
+                    caption="✅ File hasil validasi yang bisa digunakan untuk inputan"
                 )
 
 
@@ -565,7 +566,7 @@ def main():
 
     app.add_handler(
         CommandHandler(
-            "start",
+            "sifa",
             start_command
         )
     )
