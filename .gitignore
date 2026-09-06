@@ -1,0 +1,8 @@
+.env  
+__pycache__/  
+*.pyc  
+.venv/  
+venv/  
+output/  
+data/map_border.csv
+runtime.txt
