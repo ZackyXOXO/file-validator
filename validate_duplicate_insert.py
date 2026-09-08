@@ -132,7 +132,7 @@ def validate_map_border(row, map_df):
             row["polygon_type"]  
         )  
     ).strip().upper()  
-
+  
     if polygon_type == "GRID":  
         return None  
 
@@ -1122,8 +1122,11 @@ async def handle_document(
         return  
 
     command = caption.lower().split()  
+    cmd = command[0].split("@")[0]
+    if len(command) != 2:  
+        cmd = command[0].split("@")[0]  
 
-    if len(command) != 2 or command[0] != "/val_sifa":  
+    if cmd != "/val_sifa":  
         await update.message.reply_text(  
             "❌ Format salah\n\n"  
             "Gunakan:\n"  
