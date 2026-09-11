@@ -1088,7 +1088,7 @@ async def start_command(
         return  
 
     await update.message.reply_text(  
-        "<b>TOP GLOBAL SIFA is HERE !!</b>\n\n"  
+        "<b>TEST VALIDATION SIFA</b>\n\n"  
         "Cara penggunaan:\n\n"  
         "/val_sifa insert\n"  
         "/val_sifa delete\n"  
